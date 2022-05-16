@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default preset for use with guidojw's repos",
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    "docker:enableMajor",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "labels": ["dependencies"],
+  "prConcurrentLimit": 0,
+  "rangeStrategy": "bump",
+  "timezone": "Europe/Amsterdam",
+  "packageRules": [
+    {
+      "extends": ["schedule:weekly"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "excludePackageNames": ["yarn"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["dockerfile", "nvm"],
+      "groupName": "Node.js",
+      "ignoreUnstable": false
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all actions"
+    }
+  ],
+  "enabledManagers": ["dockerfile", "github-actions", "npm", "nvm"]
+}
