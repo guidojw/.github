@@ -50,5 +50,5 @@
       "versioningTemplate": "semver"
     }
   ],
-  "enabledManagers": ["dockerfile", "github-actions", "npm", "nvm"]
+  "enabledManagers": ["dockerfile", "github-actions", "npm", "nvm", "regex"]
 }
