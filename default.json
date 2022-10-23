@@ -4,6 +4,7 @@
   "extends": [
     "config:base",
     ":disableDependencyDashboard",
+    ":enableVulnerabilityAlerts",
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)",
     "docker:enableMajor",
