@@ -46,9 +46,8 @@
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
       "matchStrings": ["\\s+.+download-actionlint\\.bash\\)? (?<currentValue>.+)"],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "rhysd\/actionlint",
-      "extractVersionTemplate": "^v?(?<version>.*)$",
-      "versioningTemplate": "semver"
+      "depNameTemplate": "rhysd\\/actionlint",
+      "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ],
   "enabledManagers": ["dockerfile", "github-actions", "npm", "nvm", "regex"]
