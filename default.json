@@ -46,7 +46,7 @@
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
       "matchStrings": ["\\s+.+download-actionlint\\.bash\\)? (?<currentValue>.+)"],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "rhysd\\/actionlint",
+      "depNameTemplate": "rhysd\/actionlint",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ],
