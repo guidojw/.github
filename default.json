@@ -20,7 +20,7 @@
       "extends": ["schedule:weekly"],
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["minor", "patch"],
-      "excludePackageNames": ["yarn"],
+      "excludePackageNames": ["typescript", "yarn"],
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch"
     },
